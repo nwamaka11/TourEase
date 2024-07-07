@@ -31,14 +31,13 @@ nav {
 .container {    
     display: flex;
     width: 1240px;
-    height: 633px;
+    height: auto;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     flex-shrink: 0;
     position: relative;
     top: 196px;
-    bottom: 143px;
     left: 100px;
     right: 100px;
 }
@@ -60,6 +59,30 @@ nav {
     line-height: 36px;
 }
 
+.feed-btn {
+    display: flex;
+    padding: 10px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #3F6774;
+    position: absolute;
+    top: 200px;
+}
+
+.feed-btn p {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.feed-pages {
+    position: relative;
+    top: 100px;
+}
+
 .pages {
     padding: 6px 10px;
     margin-right: 458.5px;
@@ -68,6 +91,8 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.40);
     background: rgba(255, 255, 255, 0.20);
     box-shadow: 0px 4px 4px 0px rgba(9, 18, 22, 0.08);
+    position: relative;
+    top: 70px;
 }
 
 .pages li {
@@ -115,6 +140,8 @@ nav {
     background: rgba(249, 249, 249, 0.72);
     box-shadow: 0px 4px 6px 0px rgba(9, 18, 22, 0.06);
     backdrop-filter: blur(5px);
+    position: relative;
+    top: 110px;
 }
 
 .content {
@@ -273,13 +300,14 @@ nav {
 main {
     width: 1242px;
     position: absolute;
-    top: 926px;
+    top: 792px;
     left: 100px;
 }
 
 .favorite {
     width: 1242px;
     height: 84px;
+    padding-top: 108px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -319,6 +347,7 @@ main {
 .favorite-images {
     display: flex;
     align-items: center;
+    padding-top: 30px;
     gap: 26px;
     align-self: stretch;
 }
@@ -407,7 +436,7 @@ main {
 }
 
 .footer {
-    position: fixed;
+    position: absolute;
     top: 2000px;
     width: 1428px;
     height: 279px;
@@ -423,7 +452,7 @@ main {
         background-position: center;
         background-repeat: no-repeat;
         width: 100vw;
-        height: 200px;
+        height: 300px;
         flex-shrink: 0;
         border-radius: 0px 0px 16px 16px;
         position: absolute;
@@ -470,14 +499,33 @@ main {
         line-height: 18px;
     }
 
+    .feed-btn {
+        display: flex;
+        padding: 5px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-radius: 4px;
+        background: #3F6774;
+        position: absolute;
+        top: 80px;
+        color: #FFF;
+        font-size: 8px;
+        font-weight: 700;
+        line-height: 12px;
+    }
+
     .pages {
         padding: 6px 10px;
-        margin-right: 50px;
-        margin-left: 50px;    
+        margin-right: 125px;
+        margin-left: 140px; 
+        display: inline-block;   
         border-radius: 5px;
         border: 1px solid rgba(255, 255, 255, 0.40);
         background: rgba(255, 255, 255, 0.20);
         box-shadow: 0px 4px 4px 0px rgba(9, 18, 22, 0.08);
+        position: relative;
+        top: 60px;
     }
 
     .pages li {
@@ -511,6 +559,16 @@ main {
         bottom: -3px;
     }
 
+    /* .feed a::after {
+        content: '';
+        width: 100%;
+        height: 1.5px;
+        background: #22B4FF;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+    } */
+
     .tab-contents {
         display: flex;
         height: 150px;
@@ -524,6 +582,8 @@ main {
         background: rgba(249, 249, 249, 0.72);
         box-shadow: 0px 4px 6px 0px rgba(9, 18, 22, 0.06);
         backdrop-filter: blur(5px);
+        position: relative;
+        top: 70px;
     }
 
     .content {
@@ -850,4 +910,65 @@ main {
         height: 279px;
         background: #232F3B;
     }  
+}
+
+/* CSS FOR FEED */
+
+.feed a::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #22B4FF;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+.feed-main {
+    position: absolute;
+    top: 622px;
+}
+
+.sales-feed {
+    width: 1242px;
+    height: 394px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 2500px;
+    border-radius: 32px 32px 0px 0px;
+    background: url(../Images/filtered\ light.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* feed for small devices */
+
+@media only screen and (max-width:450px) {
+    .feed a::after {
+        content: '';
+        width: 100%;
+        height: 1.5px;
+        background: #22B4FF;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+    }
+    
+    .feed-main {
+        position: absolute;
+        top: 250px;
+    }
+    
+    .sales-feed {
+        width: 390px;
+        height: 160px;
+        flex-shrink: 0;
+        position: absolute;
+        top: 800px;
+        border-radius: 16px 16px 0px 0px;
+        background: url(../Images/filtered\ light.jfif);
+        background-size: cover;
+        background-repeat: no-repeat;
+
 }
