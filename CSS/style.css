@@ -378,6 +378,7 @@ main {
     height: 80px;
     display: flex;
     padding: 0px 9.873px;
+    margin: 10px;
     align-items: center;
     justify-content: space-between;
     gap: 96px;
@@ -407,8 +408,446 @@ main {
 
 .footer {
     position: fixed;
-    top: 2020px;
+    top: 2000px;
     width: 1428px;
     height: 279px;
     background: #232F3B;
+}
+
+/* for mobile screen */
+
+@media only screen and (max-width:450px) {
+    .header {
+        background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1) 100%), url(../Images/Frame\ 102.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 200px;
+        flex-shrink: 0;
+        border-radius: 0px 0px 16px 16px;
+        position: absolute;
+    }
+    
+    nav {
+        display: inline-flex;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 6px 6px 0px 0px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+    }
+
+    .container {    
+        display: flex;
+        width: 410px;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-shrink: 0;
+        position: relative;
+        top: 20px;
+        bottom: 50px;
+        left: 20px;
+        right: 20px;
+    }
+    
+    .container h1 {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        width: 150px;
+    }
+
+    .container span {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    .pages {
+        padding: 6px 10px;
+        margin-right: 50px;
+        margin-left: 50px;    
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.40);
+        background: rgba(255, 255, 255, 0.20);
+        box-shadow: 0px 4px 4px 0px rgba(9, 18, 22, 0.08);
+    }
+
+    .pages li {
+        list-style: none;
+        display: inline-block;
+        gap: 10px;    
+        padding-left: 10px;
+    }
+
+    .pages li:first-child {
+        padding-left: 0;
+    }
+    
+    .pages li a {        
+        color: #09374A;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px; 
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .stay a::after {
+        content: '';
+        width: 100%;
+        height: 1.5px;
+        background: #22B4FF;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+    }
+
+    .tab-contents {
+        display: flex;
+        height: 150px;
+        margin: 10px;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        align-self: stretch;
+        border-radius: 12px;
+        background: rgba(249, 249, 249, 0.72);
+        box-shadow: 0px 4px 6px 0px rgba(9, 18, 22, 0.06);
+        backdrop-filter: blur(5px);
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        position: relative;
+        width: auto;
+    }
+
+    .guest {
+        display: flex;
+        padding: 5px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.90);
+        box-shadow: 0px 4px 4px 0px rgba(8, 25, 32, 0.02);
+        box-sizing: border-box;
+        cursor: pointer;
+        color: rgba(9, 55, 74, 0.60);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    .guest img {
+        width: 12px;
+    }
+
+    .search-bar {
+        width: 370px; 
+        height: 50px;
+        position: absolute;
+        bottom: 50px;
+    }
+
+    .search-bar form {
+        display: flex;
+        align-items: center;
+        flex-wrap: no-wrap;
+    }
+
+    .search-bar form input {
+        display: block;
+        border: 0;
+        outline: none;
+        background: rgba(217, 217, 217, 0.16);        
+    }
+
+    .location, .check-in, .check-out {
+        display: flex;
+        height: 60px;
+        padding: 10px 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;        
+    }
+
+    .location {
+        width: 90px;
+        border-radius: 16px 0px 0px 16px;
+        border: 1px solid rgba(66, 66, 66, 0.16);
+        background: rgba(217, 217, 217, 0.16);
+    }
+
+    .check-in {
+        width: 110px;
+        border: 1px solid rgba(66, 66, 66, 0.20);
+        background: rgba(217, 217, 217, 0.16);
+        position: relative;
+    }
+
+    
+    .check-out{
+        width: 170px;
+        flex-grow: 1;
+        border-radius: 0px 16px 16px 0px;
+        border: 1px solid rgba(30, 30, 30, 0.16);
+        background: rgba(217, 217, 217, 0.16);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .search-bar form label {
+        color: #07080A;
+        font-family: Inter;
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 12px;
+    }
+
+    .search-bar input { 
+        color: #09374A;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px; 
+    }
+    
+    .check-in-details {
+        width: 60px;
+    }
+    
+    .check-out-details {
+        width: 50px;
+    }
+
+    .check-in-date img {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        bottom: 18px;
+        right: 10px;
+    }
+
+    .check-out-date img {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        bottom: 18px;
+        right: 75px;
+    }
+
+    
+    .search-bar form button {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-radius: 6px;
+        background: linear-gradient(126deg, #0DC5FF 46.84%, rgba(11, 107, 177, 0.50) 120.45%);
+        box-shadow: 0px 1px 1px 0px rgba(106, 116, 121, 0.1);
+        color: #FFF;
+        font-family: Inter;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 12px;
+    }
+
+    .filter {
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+        color: rgba(9, 55, 74, 0.60);
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    .filter img {
+        width: 10px;
+    }
+
+    main {
+        width: 390px;
+        position: absolute;
+        top: 350px;
+        left: 30px;
+    }
+
+    .favorite {
+        width: 390px;
+        height: 42px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .text {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .text h1 {
+        color: #09374A;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+    }
+
+    .text p {
+        font-size: 10px;
+    }
+
+    .see-more {
+        width: auto;
+        height: 12px;
+        display: flex;
+        padding: 3px;
+        align-items: center;
+        gap: 5px;
+        color: rgba(7, 8, 10, 0.50);
+        text-align: center;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 12px; 
+    }
+
+    .see-more img {
+        width: 8px;
+    }
+
+    .favorite-images {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+    }
+
+    .favorite-images img {
+        width: 200px;
+        height: 100px;
+    }
+
+    .half img {
+        width: 10px;
+    }
+
+    .sales {
+        width: 390px;
+        height: 160px;
+        flex-shrink: 0;
+        position: absolute;
+        top: 180px;
+        border-radius: 16px 16px 0px 0px;
+        background: url(../Images/filtered\ light.jfif);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .sales-heading {
+        position: absolute;
+        left: 10px;
+        margin-top: 5px;
+    }
+
+    .sales h2 {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+
+    .sales p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+    }
+
+    .hotels {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 40px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .hotels img {
+        width: 120px;
+        height: 100px;
+        gap: 16px;
+        position: inherit;
+        border-radius: 16px;
+    }
+ 
+    .hotel-location {
+        width: 100px;
+        height: 20px;
+        display: flex;
+        padding: 0px 3px;
+        margin: 5px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .hotel-location p {
+        color: #EAEAEA;
+        text-align: left;
+        font-family: Inter;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 10px;
+    }
+    
+    .hotel-location span {
+        color: #FFF;
+        font-size: 16px;
+        line-height: 12px;    
+    }
+    
+    .hotel-location img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer {
+        position: fixed;
+        top: 550px;
+        width: 1428px;
+        height: 279px;
+        background: #232F3B;
+    }  
 }
